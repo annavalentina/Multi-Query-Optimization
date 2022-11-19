@@ -163,9 +163,15 @@ public class DiamondTopology {
             declarer.declare(new Fields("word"));
         }
     }
-
+	
+	//Argument 0: Topology name
+	//Argument 1: Number of tasks
+	//Argument 2: Cpu req list
+	//Argument 3: Number of characters of each tuple
+	//Argument 4: Number of characters of each tuple
+	//Argument 5: Number of tuples
     public static void main(String[] args) throws Exception {
-
+	
         Integer numberOfTasks = Integer.parseInt(args[1]);
         Integer firstId = Integer.parseInt(args[2]);
         String[] cpuReqs = args[3].split(",");
