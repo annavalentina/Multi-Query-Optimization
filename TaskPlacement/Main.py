@@ -47,7 +47,7 @@ def optimize_global_F_by_objective(algorithm, opt_type, setting, F_global, objec
             if dev not in devices:
                 devices.append(dev)
 
-    # Calculate the average cpu and ram of the devices utilized for the top-x dags
+    # Calculate the average cpu of the devices utilized for the top-x dags
     avg_cpu = 0
     for dev in devices:
         avg_cpu += variables.cpu_capacity[dev]
