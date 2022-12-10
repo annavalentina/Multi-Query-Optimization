@@ -1,0 +1,18 @@
+storm.zookeeper.servers: ["zookeeper"]
+storm.local.dir: "/data"
+nimbus.seeds: ["nimbus"]
+supervisor.slots.ports:
+ - 6700
+ - 6701
+ - 6702
+ - 6703
+ - 6704
+worker.heap.memory.mb: 2048
+worker.childopts: "-Xmx%HEAP-MEM%m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=artifacts/heapdump"
+worker.gc.childopts: ""
+#storm.scheduler: "org.apache.storm.scheduler.resource.ResourceAwareScheduler"
+storm.scheduler: "com.schedulers.CustomScheduler"
+storm.cluster.metrics.consumer.publish.interval.secs: 10
+executor.metrics.frequency.secs: 10
+topology.builtin.metrics.bucket.size.secs: 10
+topology.v2.metrics.tick.interval.seconds: 10
