@@ -30,7 +30,7 @@ docker network create --driver overlay --subnet 10.0.0.0/24 --gateway 10.0.0.99 
 ### Deploy and run experiments
 1. Place the scripts folder to a machine that has ssh access to each node of the cluster.
 2. Modify incl.sh accordingly.
-3. Run deploy.sh (sets latency and bandwidth between each pair of cluster nodes, start Apache Storm and runs experiments).
+3. Run deploy.sh (sets latency and bandwidth between each pair of cluster nodes, starts Apache Storm and runs experiments).
 4. The results will be located in the storm_metrics folder.
 
 
