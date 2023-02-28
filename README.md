@@ -18,7 +18,7 @@ For each node ssh access is required in order to customize the latency and bandw
 1. Create a swarm mode, set leader and rest nodes.
 2. Create a docker network
 ```shell
-docker network create --driver overlay --subnet 10.0.0.0/24 --gateway 10.0.0.99 stormnet
+docker network create --driver overlay --attachable stormnet
 ```
 3. Place the files of the stack folder to each node.
   - each supervisor.scheduler.meta.group-id field in supervisor.yaml must be unique (e.g. anaconda => 1, deer => 2, etc).
