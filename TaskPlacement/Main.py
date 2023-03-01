@@ -70,7 +70,7 @@ def optimize_global_F_by_objective(algorithm, opt_type, setting, F_global, objec
         run_algorithm(algorithm, opt_type, graph, setting_temp, devices_not_to_use)
         if not graph.placed:
             run_algorithm(algorithm, opt_type, graph, setting_temp, [])
-    F_global_new, RC_global_new, latency_global_new = calculate_objective_global(setting_temp)
+    F_global_new, RC_global_new, latency_global_new, sel_global_new = calculate_objective_global(setting_temp)
 
     # If a better solution was found keep it, otherwise discard it
     if F_global_new > F_global or setting_temp.number_of_placed_dags != setting.number_of_placed_dags:
@@ -106,7 +106,7 @@ def optimize_global_F_byUtil(algorithm, opt_type, setting, F_global, delta):
         run_algorithm(algorithm, opt_type, graph, setting_temp, devices_not_to_use)
         if not graph.placed:
             run_algorithm(algorithm, opt_type, graph, setting_temp, [])
-    F_global_new, RC_global_new, latency_global_new = calculate_objective_global(setting_temp)
+    F_global_new, RC_global_new, latency_global_new, sel_global_new = calculate_objective_global(setting_temp)
 
     # If a better solution was found keep it, otherwise discard it
     if F_global_new > F_global or setting_temp.number_of_placed_dags != setting.number_of_placed_dags:
