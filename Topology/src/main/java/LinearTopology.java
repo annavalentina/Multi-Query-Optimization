@@ -167,7 +167,7 @@ public class LinearTopology {
         }
     }
 	//Argument 0: Topology name
-	//Argument 1: Number of tasks
+	//Argument 1: n (Total number of tasks = 1 source + n-2 tasks + 1 sink)
 	//Argument 2: First id (if other topologies already exist)
 	//Argument 3: CPU req list
 	//Argument 4: Number of characters of each tuple
