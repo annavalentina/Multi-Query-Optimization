@@ -168,8 +168,8 @@ public class LinearTopology {
     }
 	//Argument 0: Topology name
 	//Argument 1: Number of tasks
-	//Argument 2: Cpu req list
-	//Argument 3: Number of characters of each tuple
+	//Argument 2: First id (if other topologies already exist)
+	//Argument 3: CPU req list
 	//Argument 4: Number of characters of each tuple
 	//Argument 5: Number of tuples
     public static void main(String[] args) throws Exception {
