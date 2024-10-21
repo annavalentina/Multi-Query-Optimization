@@ -29,7 +29,7 @@ public class CustomScheduler implements IScheduler {
         //Create HashMap <task id, supervisor id>
         Map<Integer, Integer> taskToSupervisor = new HashMap<Integer, Integer>();
         try {
-            File myObj = new File("/jars/config.txt");
+            File myObj = new File("config.txt");
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
                 String[] ids = myReader.nextLine().split("\\s+");
